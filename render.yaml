@@ -1,0 +1,100 @@
+services:
+  - type: web
+    name: arc-raiders-app
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn server:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+```
+
+Click **"Commit new file"**
+
+---
+
+### **STEP 4: Sign Up for Render**
+
+1. Go to: https://render.com
+2. Click **"Get Started for Free"**
+3. Click **"Sign up with GitHub"**
+4. Authorize Render to access GitHub
+5. Allow access to your repositories
+
+---
+
+### **STEP 5: Create Web Service on Render**
+
+1. On Render dashboard, click **"New +"**
+2. Click **"Web Service"**
+3. Find your **"arc-raiders-app"** repository
+4. Click **"Connect"**
+
+---
+
+### **STEP 6: Configure the Service**
+
+Fill in these settings:
+
+- **Name:** `arc-raiders-app` (or whatever you want)
+- **Region:** Choose closest to you
+- **Branch:** `main`
+- **Runtime:** `Python 3`
+- **Build Command:** `pip install -r requirements.txt`
+- **Start Command:** `gunicorn server:app`
+- **Instance Type:** **Free** (select this!)
+
+Click **"Create Web Service"**
+
+---
+
+### **STEP 7: Wait for Deployment**
+
+Render will now:
+1. Download your code
+2. Install dependencies
+3. Start your server
+
+This takes **2-5 minutes**. You'll see logs scrolling.
+
+Wait until you see:
+```
+✓ Your service is live 🎉
+```
+
+---
+
+### **STEP 8: Get Your URL**
+
+At the top of the page, you'll see:
+```
+https://arc-raiders-app.onrender.com
+```
+
+Or something similar. **Copy this URL!**
+
+---
+
+### **STEP 9: Test It!**
+
+1. Open the URL in your browser
+2. You should see the MetaForge page!
+3. Open it on your phone
+4. Install as app (Chrome → Menu → "Add to Home screen")
+
+---
+
+## ✅ YOU NOW HAVE:
+
+✅ **Permanent URL** (never changes)  
+✅ **Works 24/7** (always online)  
+✅ **Free forever** (Render free tier)  
+✅ **Works anywhere** (WiFi, 4G, 5G)  
+✅ **Installable app** on phone  
+✅ **No computer needed**  
+
+---
+
+## 📱 Your Final URL Format:
+```
+https://your-app-name.onrender.com
